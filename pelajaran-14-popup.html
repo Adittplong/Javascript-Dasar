@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alert</title>
+</head>
+<body>
+    <script>
+        const name = prompt("Siapa Nama Anda : ");
+        const masuk = confirm(`Apakah bener Nama anda ${name}`);
+        if(masuk){
+            document.writeln(`Hello ${name}`);
+        }else{
+            alert("Bye Bye");
+        };
+    </script>   
+</body>
+</html>

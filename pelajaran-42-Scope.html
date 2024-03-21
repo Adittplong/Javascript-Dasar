@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Scope</title>
+    </head>
+    <body>
+        <script>
+            //global scope
+            let counter = 0;
+
+            function hitme(){
+                //local scope hitme
+                counter++;
+            }
+
+            hitme();
+            hitme();
+            
+            //global
+            console.info(`${counter}`)
+
+            function pertama(){
+                let variabelpertama = "Pertama";
+                console.info(variabelpertama);
+            };
+
+            function kedua(){
+                let variabelkedua = "kedua";
+                console.info(variabelkedua)
+            };
+
+            pertama();
+            kedua();
+
+            function ketiga(){
+                let variabelketiga = "Ketiga";
+
+                function keempat(){
+                    console.info(variabelketiga);
+                }
+
+                keempat();
+            }
+
+            ketiga();
+        </script>
+    </body>
+</html>

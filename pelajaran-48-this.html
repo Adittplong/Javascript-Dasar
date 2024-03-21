@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body>
+    <script>
+        console.info(this);
+
+        function simple() {
+            console.info(this)
+        }
+
+        simple();
+
+        const person = {
+            nama : "Aditya",
+            sayhello : function(value) {
+                console.info(`Hello ${value} my name si ${this.nama}`)
+                console.info(this);
+            }
+        };
+
+        person.sayhello("Adit")
+        person.sayhello("Prayoga")
+    </script>
+</body>
+</html>

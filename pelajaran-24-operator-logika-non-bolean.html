@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Opeartor logika non bolean</title>
+</head>
+<body>
+    <script>
+        //atau
+        console.info("hello" || "");
+        console.info("" || []);
+        console.info("0" || "NOL");
+        console.info(0 || "0");
+        console.info(null || "Null");
+        console.info(undefined || "undefined")
+
+        // contoh
+        let person = {
+            firstname : "Aditya",
+            lastname : "Prayoga"
+        };
+
+        let name = person.firstname || person.lastname; 
+        console.info(name);
+
+        //operator and
+        console.info("hello" && "");
+        console.info("" && []);
+        console.info("0" && "NOL");
+        console.info(0 && "0");
+        console.info(null && "Null");
+        console.info(undefined && "undefined")
+
+        person = {
+            firstname : "Aditya",
+            lastname : "Prayoga"
+        };
+
+        name = person.firstname && person.lastname; 
+        console.info(name);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>operator Matematika</title>
+    </head>
+    <body>
+
+      <script>
+            //Pertambahan 
+            let a = 5;
+            let b = 10;
+            let c = a+b;
+
+            document.writeln("<p>"+ c + " = " + a + " + " + b +"</p>");
+                
+
+            //pengurangan
+            let c1 = a-b;
+            document.writeln("<p>"+ c1 + " = " + a + " - " + b +"</p>");
+
+            // perkalian
+            let c2 = a*b;
+            document.writeln("<p>"+ c2 + " = " + a + " * " + b +"</p>");
+
+            //Augmented Assigment
+            let result = a+b;
+            let originalresult = result;
+            document.writeln("<p>"+a + " + " + b + " = "+ result +"</p>");
+
+            result-=10
+            document.writeln("<p>"+ originalresult + " - 10 = " + result +"</p>");
+            originalresult = result
+
+            result*=10
+            document.writeln("<p>"+ originalresult + " * 10 = " + result +"</p>") ;
+            
+            //Operator Unary
+            let result2 = +1;
+            document.write("<p>"+ result2 +"</p>");
+            result2--;
+            document.write("<p>"+ result2 +"</p>");
+            result2++;
+            document.write("<p>"+ result2 +"</p>");
+            result2 = -result2;
+            document.write("<p>"+ result2 +"</p>");
+            result2 = +result2;
+            document.write("<p>"+ result2 +"</p>");
+
+      </script>
+    </body>
+</html>

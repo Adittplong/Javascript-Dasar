@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recursive Function</title>
+</head>
+<body>
+    <script>
+        // Factorial Function perulangan
+        function loop(value){
+            let result = 1;
+            for (let i = 1; i <=value; i++){
+                result *=i;        
+            }
+            return result;
+        }
+
+        console.info(loop(5));
+        console.info(1*2*3*4*5);
+
+        function functionrecursive(valu){
+            if(valu === 1){
+                return 1;
+            }else{
+                return valu * functionrecursive(valu-1);
+            };
+        };
+
+        console.log(functionrecursive(5));
+
+
+    </script>
+</body>
+</html>

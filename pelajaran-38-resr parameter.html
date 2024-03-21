@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+        function sum(name, ...data){
+            let total = 0;
+            for (const item of data) {
+                total += item ;
+            }
+            document.writeln(`<p>Total ${name} is ${total}</p>`);
+        };
+
+        sum("orange",1,2,3,4,5,6,7,8,9,0);
+        sum("Apple",2,4,6,8,10,12,14,16,18,20,22);
+        sum("Banana",3,6,9,12,15,18,21,24,27,30);
+
+        const value = [10,10,10,10,10];
+        sum("Belimbing",...value);
+
+        // Argument Object
+        function oldsum(){
+            let total = 0;
+            for (const argument of arguments) {
+                total += argument;
+            }
+            document.writeln(`<p>Total is ${total}</p>`);
+        };
+
+        oldsum(4,8,12,16,20,24,30,34,38,42);
+
+    </script>
+</body>
+</html>

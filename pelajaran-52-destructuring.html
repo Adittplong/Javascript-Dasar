@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring</title>
+</head>
+<body>
+    <script>
+        //array
+        // const names = ["Aditya", "Prayoga","Suarman","rika", "siti"];
+        // // const first = names[0];
+        // // const middle = names[1];
+        // // const last = names[2];
+
+        // const [first, middle, last, ...others]=names;
+
+        // console.info(first);
+        // console.info(middle);
+        // console.info(last);
+        // console.info(others);
+
+        
+        // const person = {
+        //     firstname : "aditya",
+        //     lastname : "prayoga",
+        //     address : {
+        //         street : "Pesona Cinangka Asri",
+        //         city : "Depok",
+        //         country : "Indonesia"
+        //     },
+        //     hobby : "game",
+        //     channel : "Kotak Kosong Game"
+        // };
+
+        // const {firstname, lastname, address : {city, street , country}, ...other} = person;
+        // console.info(firstname);
+        // console.info(lastname);
+        // console.info(city);
+        // console.info(street);
+        // console.info(country);
+        // console.info(other);
+
+       { function displayperson({first, mid, last}) {
+            console.info(person.first);
+            console.info(person.mid);
+            console.info(last);
+        };
+
+        const person = {
+            first : "Aditya",
+            mid : "prayoga",
+            last : "suarman" 
+        };
+
+        displayperson(person);}
+
+        {function array([first , second]) {
+            return first + second;
+        }
+
+        console.info(array([1,1]));
+        console.info(array([10,10]));}
+
+        {
+            const name = ["Aditya","Prayoga"];
+            const [first, mid, last = "Suarman"] = name;
+
+            console.info(first);
+            console.info(mid);
+            console.info(last);
+        }
+
+        {
+            const person = {
+            firstname : "aditya",
+            lastname : "prayoga",
+            address : {
+                street : "Pesona Cinangka Asri",
+                city : "Depok",
+                country : "Indonesia"
+            },
+            hobby : "game",
+            channel : "Kotak Kosong Game"
+        };
+
+        const {firstname,middle = "dan", lastname, address : {city, street , country}, ...other} = person;
+        console.info(firstname);
+        console.info(lastname);
+        console.info(middle);
+        console.info(city);
+        console.info(street);
+        console.info(country);
+        console.info(other);
+        }
+
+        {
+        const person = {
+            firstname : "aditya",
+            lastname : "prayoga",
+            middlename : "dan",
+        };
+
+        let{
+            firstname : depan,
+            middlename : tengah = "Suarman",
+            lastname : belakang} = person;
+        console.info(depan);
+        console.info(belakang);
+        console.info(tengah);
+
+        }
+
+
+    </script>
+</body>
+</html>
